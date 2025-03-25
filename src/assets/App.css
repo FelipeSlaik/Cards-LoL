@@ -1,29 +1,44 @@
-.titulo{
-    text-align: center;
+.titulo {
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  text-transform: capitalize;
 }
 
-.champion-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.champion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-image: url(../assets/image/lol.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card{
-    background: #080707;
-    color: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s;
+.card {
+  background: #080707;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #524e39 #524e39 #693a13 #693a13;
+  transition: transform 0.3s;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
 }
 
-.card img{
-    width: 100%;
-    border-radius: 8px;
+.card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
-.card:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #c07130 #c97835 #d3b833 #b8a130 ;
 }

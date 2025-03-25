@@ -3,7 +3,7 @@ import ChampionCard from "./ChampionCard";
 import { useEffect } from "react";
 
 const ChampionList = () =>{
-    const [champions, setChamions] = useState([]);
+    const [champions, setChampions] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -11,13 +11,14 @@ const ChampionList = () =>{
         const fetchChampions = async () => {
             try{
                 const response = await fetch(
-                    "https://ddragon.leagueoflegends.com/cdn/13.18.1/data/pt_BR/champion.json"
+                "/championFull.json"
                 );
                 if(!response.ok){
                     throw new Error("Erro na busca de campeões");
                 }
                 const data = await response.json();
-                setChamions(Object.values(data.data));
+                setChampions(Object.values(data.data));
+                console.log(data)
             } catch (err){
                 setError(err.message);
             } finally {
